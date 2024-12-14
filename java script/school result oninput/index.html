@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        .header{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center><H1>RESULT :</H1></center>
+
+    <br>
+   <div class="header">
+
+    <label  for="">ENTER STUDENT NAME :</label>
+    <input type="text" name="" id="one" oninput="demo()" >
+
+   </div>
+    <table align="center" border="2px solid black">
+        
+        <tr>
+            <td>Name : </td>
+            <td colspan="6"><span id="sth-name"></span></td>
+            
+        </tr>
+        
+        <tr>
+            <td>EnrollmentNo : </td>
+            <td colspan="6"><input type="text" name="" id=""></td>
+        
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>INTERNAL MARKS </td>
+            <td>OBTAINED INTERNAL</td>
+            <td>EXTERNAL MARKS</td>
+            <td>EXTERNAL OBTAINED</td>
+            <td>TOTAL MARKS </td>
+            <td>GAINED MARKS</td>
+        </tr>
+        <tr>
+            <td>DBMS </td>
+            <td>30</td>
+            <td><input type="number"id="dbms-mid" size="10" oninput="demo()"></td>
+            <td>70</td>
+            <td><input type="number"id="dbms-final" size="10" oninput="demo()"></td>
+            <td>100</td>
+            <td><span id="dbms-total"></span></td>
+        </tr>
+        <tr>
+            <td>PHP </td>
+            <td>30</td>
+            <td><input type="number"id="php-mid" size="10" oninput="demo()"></td>
+            <td>70</td>
+            <td><input type="number"id="php-final" size="10" oninput="demo()"></td>
+            <td>100</td>
+            <td><span id="php-total"></span></td>
+        </tr>
+        <tr>
+            <td>ASP.NET</td>
+            <td>30</td>
+            <td><input type="number"id="asp-mid" size="10" oninput="demo()"></td>
+            <td>70</td>
+            <td><input type="number"id="asp-final" size="10" oninput="demo()"></td>
+            <td>100</td>
+            <td><span id="asp-total"></span></td>
+        </tr>
+        <tr>
+            <td>JAVA</td>
+            <td>30</td>
+            <td><input type="number"id="java-mid" size="10" oninput="demo()"></td>
+            <td>70</td>
+            <td><input type="number"id="java-final" size="10" oninput="demo()"></td>
+            <td>100</td>
+            <td><span id="java-total"></span></td>
+        </tr>
+        <tr>
+            <td>ETT </td>
+            <td>30</td>
+            <td><input type="number"id="ett-mid" size="10" oninput="demo()"></td>
+            <td>70</td>
+            <td><input type="number"id="ett-final" size="10" oninput="demo()"></td>
+            <td>100</td>
+            <td><span id="ett-total"></span></td>
+        </tr>
+        <tr>
+            <td>TOTAL </td>
+            <td>-</td>
+            <td id="mid-total"></td>
+            <td>-</td>
+            <td id="final-total"></td>
+            <td>500</td>
+            <td id="total"></td>
+        </tr>
+        <tr>
+            <td>PERCENTAGE </td>
+            <td colspan="6"> <span id="per"></span></td>
+           
+        </tr>
+    </table>
+
+    <script>
+        // oninput name script
+        function demo() {
+            let a = document.getElementById("one").value;
+            document.getElementById("sth-name").innerHTML = a;
+            
+             dbmsmid = document.getElementById("dbms-mid").value;
+             dbmsfinal = document.getElementById("dbms-final").value;
+             dbmstotal = Number(dbmsmid) + Number(dbmsfinal);
+            document.getElementById("dbms-total").innerHTML = dbmstotal;
+
+             phpmid = document.getElementById("php-mid").value;
+         phpfinal = document.getElementById("php-final").value;
+         phptotal = Number(phpmid) + Number(phpfinal);
+            document.getElementById("php-total").innerHTML = phptotal;
+
+            
+            let aspid = document.getElementById("asp-mid").value;
+            let aspfinal = document.getElementById("asp-final").value;
+            let asptotal = Number(aspid) + Number(aspfinal);
+            document.getElementById("asp-total").innerHTML = asptotal;
+
+            let javaid = document.getElementById("java-mid").value;
+            let javafinal = document.getElementById("java-final").value;
+            let javatotal = Number(javaid) + Number(javafinal);
+            document.getElementById("java-total").innerHTML = javatotal;
+
+             ettid = document.getElementById("ett-mid").value;
+             ettfinal = document.getElementById("ett-final").value;
+             etttotal = Number(ettid) + Number(ettfinal);
+            document.getElementById("ett-total").innerHTML = etttotal;
+
+            document.getElementById("mid-total").innerHTML = Number(dbmsmid) + Number(phpmid) + Number(aspid) + Number(javaid)+ Number(ettid) ;
+
+            document.getElementById("final-total").innerHTML = Number(dbmsfinal) + Number(phpfinal) + Number(aspfinal) + Number(javafinal)+ Number(ettfinal) ;
+
+             finalmarks = document.getElementById("total").innerHTML = Number(dbmstotal) + Number(phptotal) + Number(asptotal) + Number(javatotal)+Number(etttotal);
+                
+            let per = finalmarks*100/500;
+            let finalper = per.toFixed(2);
+            document.getElementById("per").innerHTML = finalper;
+            
+        }
+
+
+    </script>
+</body>
+</html>

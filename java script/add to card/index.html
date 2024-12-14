@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <p class="logo"> logo </p>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p id="count">0</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="root">
+
+        </div>
+
+        <div class="slidebar">
+            <div class="head">
+                <p>Product Name</p>
+            </div>
+            <div id="cartitem">
+                <img src="s1.jpg" height="150px" alt="">
+            </div>
+            <div class="foot">
+                <h3>Prize : 50</h3>
+                <h2 id="total"></h2>
+            </div>
+
+
+            <!-- firsttt -->
+
+            <div class="card">
+                <button onclick="add()">+</button> <br>
+                <p id="demo"></p>
+                <button onclick="sub()">-</button>
+                <div class="card1">
+                    <button class="rbutton" onclick="Reset()">Reset</button>
+                </div>
+
+            </div>
+ </div>
+
+        <!-- secondd -->
+
+
+        <div class="slidebar">
+            <div class="head">
+                <p>Product Name</p>
+            </div>
+            <div id="cartitem">
+                <img src="s2.jpg" height="150px" alt="">
+            </div>
+            <div class="foot">
+                <h3>Prize : 200 </h3>
+                <h2 id="total1"></h2>
+            </div>
+            <div class="card2">
+                <button onclick="add1()">+</button> <br>
+                <p id="demo1"></p>
+                <button onclick="sub1()">-</button>
+                <div class="card6">
+                    <button class="rbutton" onclick="Reset1()">Reset</button>
+                </div>
+
+            </div>
+        </div>
+
+     
+      
+
+
+    </div>
+
+    <div>
+        <p>Grand Total is : <span id="total01"></span></p>
+    </div>
+    <script>
+    // first
+        let a = 0;
+        let b = a;
+        first = 50;
+        function add() {
+            document.getElementById("demo").innerHTML = ++a;
+            document.getElementById("total").innerHTML = a * first;
+            updatetotal()
+        }
+        function sub() {
+
+            if (a > 0) {
+                document.getElementById("demo").innerHTML = --a;
+                let q = document.getElementById("total").innerHTML = a * first;
+
+            }
+            updatetotal()
+        }
+        function Reset() {
+            document.getElementById("total").innerHTML = b;
+            document.getElementById("demo").innerHTML = b;
+        }
+
+        // second
+
+        let a1 = 0;
+        let b1 = a1;
+        second = 200;
+        function add1() {
+            document.getElementById("demo1").innerHTML = ++a1;
+            document.getElementById("total1").innerHTML = a1 * second;
+            updatetotal()
+        }
+        function sub1() {
+
+            if (a1 > 0) {
+                document.getElementById("demo1").innerHTML = --a1;
+                let q = document.getElementById("total1").innerHTML = a1 * first;
+
+            }
+            updatetotal()
+        }
+        function Reset1() {
+            document.getElementById("total1").innerHTML = b1;
+            document.getElementById("demo1").innerHTML = b1;
+        }
+        // third
+
+        let a2 = 0;
+        let b2 = a1;
+        third = 200;
+        function add2() {
+            document.getElementById("demo2").innerHTML = ++a2;
+            document.getElementById("total2").innerHTML = a2 * third;
+            updatetotal()
+        }
+        function sub2() {
+
+            if (a2 > 0) {
+                document.getElementById("demo2").innerHTML = --a2;
+                let s = document.getElementById("total2").innerHTML = a2 * third;
+
+            }
+            updatetotal()
+        }
+        function Reset2() {
+            document.getElementById("total2").innerHTML = b2;
+            document.getElementById("demo2").innerHTML = b2;
+        }
+
+
+       
+
+        // total
+
+        function  updatetotal(){
+            let totalvalue=(a*first)+(a1*second);
+            document.getElementById("total01").innerHTML=totalvalue;
+        }
+       
+
+
+    </script>
+</body>
+
+</html>

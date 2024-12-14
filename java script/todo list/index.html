@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <H2 style="color: white;">TASK LIST :</H2>
+        <div class="form">
+
+            <input class="add" type="text" placeholder="ENTER YOUR TASK HERE ....." name="" id="one">
+
+
+
+        </div>
+        <div class="tasks"> <button class="tasks" onclick="demo()">ADD TASK</button>
+            <ol id="content"></ol>
+        </div>
+        <div class="delete-all">Delete all</div>
+
+    </div>
+    <br>
+    <script>
+        function demo() {
+            let a = document.getElementById("one").value;
+            document.getElementById("content").innerHTML += document.getElementById("content").innerHTML = "<li>" + a +
+                "</li>"
+            document.getElementById("btn").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

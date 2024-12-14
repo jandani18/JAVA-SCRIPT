@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: whitesmoke;
+            width: 50%;
+            margin-left: 25%;
+            border: 2px solid grey;
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent5{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent6{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent7{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent8{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .parent9{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        input{
+            padding: 5px;
+            margin: 20px;
+             text-align: center;
+             background: transparent;
+             border: none;
+             border-bottom: solid 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <img src="image 1.jpg" height="100px" alt=""> *
+            <input type="text" name="" id="one" oninput="main()"> =
+            <input type="text" name="" id="tot1" >
+            
+        </div>
+        <div class="parent1">
+            <img src="image2.jpg" height="100px" alt=""> *
+            <input type="text" name="" id="two" oninput="main1()"> =
+            <input type="text" name="" id="tot2" >
+            
+        </div>
+        <div class="parent3">
+            <img src="image3.png" height="100px" alt=""> *
+            <input type="text" name="" id="three" oninput="main3()"> =
+            <input type="text" name="" id="tot3" >
+            
+        </div>
+        <div class="parent4">
+            <img src="image4.jpg" height="100px" alt=""> *
+            <input type="text" name="" id="four" oninput="main4()"> =
+            <input type="text" name="" id="tot4" >
+            
+        </div>
+        <div class="parent5">
+            <img src="img5.png" height="100px" alt=""> *
+            <input type="text" name="" id="five" oninput="main5()"> =
+            <input type="text" name="" id="tot5" >
+            
+        </div>
+        <div class="parent6">
+            <img src="image6.jpg" height="100px" alt=""> *
+            <input type="text" name="" id="six" oninput="main6()"> =
+            <input type="text" name="" id="tot6" >
+            
+        </div>
+        <div class="parent7">
+            <img src="image7.jpg" height="100px" alt=""> *
+            <input type="text" name="" id="seven" oninput="main7()"> =
+            <input type="text" name="" id="tot7" >
+            
+        </div>
+        <div class="parent8">
+            <img src="img8.png" height="100px" alt=""> *
+            <input type="text" name="" id="eight" oninput="main8()"> =
+            <input type="text" name="" id="tot8" >
+            
+        </div>
+        <div class="parent9">
+            <img src="image9.jpg" height="100px" alt=""> *
+        <input type="text" name="" id="nine" oninput="main9()"> =
+        <input type="text" name="" id="tot9" >
+        
+        </div>
+        
+    </div>
+    </div>
+   
+    <script>
+        function main()
+        {
+            let note1 = 2000;
+        let a = document.getElementById("one").value;
+
+        document.getElementById("tot1").value= note1*a;
+
+        }
+        function main1()
+        {
+            let note2 = 1000;
+        let b = document.getElementById("two").value;
+
+        document.getElementById("tot2").value= note2*b;
+
+        }
+        function main3()
+        {
+            let note3 = 500;
+        let c = document.getElementById("three").value;
+
+        document.getElementById("tot3").value= note3*c;
+
+        }
+        function main4()
+        {
+            let note4 = 200;
+        let d = document.getElementById("four").value;
+
+        document.getElementById("tot4").value= note4*d;
+
+        }
+        function main5()
+        {
+            let note5 = 100;
+        let e = document.getElementById("five").value;
+
+        document.getElementById("tot5").value= note5*e;
+
+        }
+        function main6()
+        {
+            let note6 = 50;
+        let f = document.getElementById("six").value;
+
+        document.getElementById("tot6").value= note6*f;
+
+        }
+        function main7()
+        {
+            let note7 = 20;
+        let g = document.getElementById("seven").value;
+
+        document.getElementById("tot7").value= note7*g;
+
+        }
+        function main8()
+        {
+            let note8 = 10;
+        let f = document.getElementById("eight").value;
+
+        document.getElementById("tot8").value= note8*f;
+
+        }
+        function main9()
+        {
+            let note9 = 5;
+        let h = document.getElementById("nine").value;
+
+        document.getElementById("tot9").value= note9*h;
+
+        }
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+table {
+    height: 473px;
+    width: 28%;
+    margin-left: 633px;
+    padding-left: 10px;
+}
+</style>
+
+<script>
+    function add() {
+        let first = document.getElementById("first")
+        let second = document.getElementById("second")
+        let three = document.getElementById("three")
+        let four = document.getElementById("four")
+        let five = document.getElementById("five")
+        Total = Number(first.value) + Number(second.value) + Number(three.value)+ Number(four.value) + Number(five.value);
+        // document.getElementById('total').value = Total;
+        document.getElementById('total').innerText = Total;
+    }
+    
+
+    function div() {
+        let Total = document.getElementById("total")
+        Per = Number(Total.innerText/250)*100;
+        document.getElementById('percentage').innerText = Per;
+    }
+</script>
+<body style="background-color: white">
+    <h1 style="text-align: center;"> Result </h1>
+    
+    <form>
+    <table  style=  "background-color: black; color: white;">
+        
+            <tr>
+                <td>MATHS</td>
+                <td> <input type="text" id="first" required > </td>
+            </tr>
+    
+            <tr>
+                <td>SCIENCE</td>
+                <td> <input type="text" id="second" required> </td>
+            </tr>
+    
+            <tr>
+                <td>ENGLISH</td>
+                <td> <input type="text" id="three" required> </td>
+            </tr>
+    
+            <tr>
+                <td>ACCOUNTS</td>
+                <td> <input type="text" id="four" required> </td>
+            </tr>
+    
+            <tr>
+                <td>STAT</td>
+                <td> <input type="text" id="five" required> </td>
+            </tr>
+    
+            <tr>
+                <td></td>
+                <td> <input type="button" onclick="add()" value="submit">  <input type="button" onclick="div()" value="percentage"> </td>
+            </tr>
+    
+            
+    
+           <tr>
+            <td> <label> Total : </label></td>
+            <td> <label for="" id="total"></label>  /250</td>
+           </tr>
+    
+           <tr>
+            <td> <label> Percentage : </label></td>
+            <td> <label for="" id="percentage"></label> /100 %  </td>
+           </tr>
+
+      
+       
+    </table>
+      </form>
+</body>
+</html>
